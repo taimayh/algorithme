@@ -1,0 +1,23 @@
+ALGORITHM checkpoint
+VAR
+    c:CHAR ;
+    nbrc,nbrw,nbrv:INTEGER:=0;
+
+
+BEGIN
+   
+    REPEAT
+         \\read c
+         read(c);
+         nbrca:=nbrc+1;
+         IF (c=' ' OR c='.') THEN
+            nbrw:=nbrw+1;
+         END_IF
+         IF (c='a' OR c='e' OR c='y' OR c='o' OR c='u'OR c='i') THEN
+            nbrv:=nbrv+1;
+         END_IF
+    UNTIL (c='.');
+    Write("length of the sentence is ",nbrc);
+    Write("nomber of words are ",nbrw);
+    Write("nomber of voweles ",nbrv);
+END
